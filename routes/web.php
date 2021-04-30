@@ -19,10 +19,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('kategori', CategoriesController::class);
     Route::resource('barang', ItemController::class);
     Route::resource('merek', MerkController::class);
-    Route::resource('profil', ProfileController::class);
+   
     Route::resource('supplier', SupplierController::class);
     Route::get(
         'laporan/barang',
         [ItemController::class, 'report']
     )->name('laporan.barang');
+    Route::resource('profil', ProfileController::class);
+});
     
