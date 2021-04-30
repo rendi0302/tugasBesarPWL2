@@ -17,3 +17,5 @@ Route::group(['middleware' => ['auth']], function () {
         [DashboardController::class, 'index']
     )
     Route::resource('kategori', CategoriesController::class);
+    Route::resource('barang', ItemController::class);
+    
