@@ -21,3 +21,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('merek', MerkController::class);
     Route::resource('profil', ProfileController::class);
     Route::resource('supplier', SupplierController::class);
+    Route::get(
+        'laporan/barang',
+        [ItemController::class, 'report']
+    )->name('laporan.barang');
+    
